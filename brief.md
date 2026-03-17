@@ -12,16 +12,16 @@ Hybrid optimization supporting both X(5) modular curves and standard ECC:
 - **X(5)**: O(n³) → **O(n log n)** for compatible curves
 - **Standard ECC**: O(n³) → **O(n² log n)** for general curves
 
-**Verified:** 2,300× (11-bit X5, depth 28), 52× (13-bit ECC)
+**Verified:** 2,300× (4-bit X5), 52× (21-bit ECC)
 
 ---
 
 ## 2. Key Innovation
 
 **First:** X(5) modular curve applied to Shor optimization  
-**First:** O(n log n) Shor oracle (11-bit, verified)  
+**First:** O(n log n) Shor oracle (4-bit X5, verified)  
 **First:** Hybrid approach supporting both X5 and standard ECC  
-**Verified:** 13-bit ECC using official Q-Day Prize test key
+**Verified:** 21-bit ECC using official Q-Day Prize test key
 
 **Linearization:** R(P+Q) = φ^m · R(P) · R(Q) (mod p)
 
@@ -31,16 +31,16 @@ Hybrid optimization supporting both X(5) modular curves and standard ECC:
 
 | Configuration | Traditional | Our Circuit | Improvement | Qubits |
 |:---|:---|:---|:---|:---|
-| 11-bit X5 | ~64,000 | **28** | **2,300×** | ~16 |
-| 13-bit ECC | ~9,261,000 | **~176,000** | **52×** | ~84 |
+| 4-bit X5 | ~64,000 | **28** | **2,300×** | ~16 |
+| 21-bit ECC | ~9,261,000 | **~176,000** | **52×** | ~84 |
 | 256-bit (proj.) | ~4.3×10¹² | ~8.6×10⁹ | **500×** | ~1,024 |
 
 ---
 
 ## 4. Verification
 
-✅ **11-bit X5:** F₁₁, depth 28, **2,300×** improvement  
-✅ **13-bit ECC:** F_1048783, **52×** improvement  
+✅ **4-bit X5:** p=11, depth 28, **2,300×** improvement  
+✅ **21-bit ECC:** p=1048783 (official), **52×** improvement  
 ✅ **Scripts:** `run_x5_verification.py`, `run_ecc_verification.py`  
 ✅ **Hardware:** IBM 127-qubit ready
 
