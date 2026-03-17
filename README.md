@@ -6,21 +6,17 @@
 
 ---
 
-## 🎯 Executive Summary
+## Executive Summary
 
-Hybrid optimization for Shor's algorithm, verified on both configurations:
-
-| Config | Traditional | Our Circuit | Improvement | Qubits | Script |
-|:---|:---|:---|:---|:---|:---|
-| **11-bit X5** | ~64,000 | **28** | **2,300×** | ~16 | `run_x5_verification.py` |
-| **13-bit ECC** | ~9,261,000 | **~176,000** | **52×** | ~84 | `run_ecc_verification.py` |
+| Config | Prime | Bits | Improvement | Script |
+|:---|:---|:---|:---|:---|
+| **X5** | p=11 | 4-bit | **2,300×** | `run_x5_verification.py` |
+| **ECC** | p=1048783 | 21-bit | **52×** | `run_ecc_verification.py` |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### Run 11-bit X5 Verification
+**4-bit X5:**
 ```bash
 python run_x5_verification.py
-# or
-python run_full_pipeline.py
